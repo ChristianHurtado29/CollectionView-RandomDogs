@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dog View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DogViewController" customModule="CollectionView_RandomDogs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XZ8-vF-1Yh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LZ0-ae-ZLm">
+                                    <size key="itemSize" width="333" height="269"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dogCell" id="1TX-7z-ToR" customClass="DogCell" customModule="CollectionView_RandomDogs" customModuleProvider="target">
+                                        <rect key="frame" x="40.5" y="0.0" width="333" height="269"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vh3-o2-w6h">
+                                            <rect key="frame" x="0.0" y="0.0" width="333" height="269"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EW5-GM-ngo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="333" height="269"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="EW5-GM-ngo" secondAttribute="bottom" id="8UI-Am-EfN"/>
+                                                <constraint firstItem="EW5-GM-ngo" firstAttribute="top" secondItem="vh3-o2-w6h" secondAttribute="top" id="Pcd-lb-Bp1"/>
+                                                <constraint firstAttribute="trailing" secondItem="EW5-GM-ngo" secondAttribute="trailing" id="QFT-i1-ad4"/>
+                                                <constraint firstItem="EW5-GM-ngo" firstAttribute="leading" secondItem="vh3-o2-w6h" secondAttribute="leading" id="chm-qX-aeJ"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="333" height="269"/>
+                                        <connections>
+                                            <outlet property="dogImageView" destination="EW5-GM-ngo" id="QqI-yZ-ZQF"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XZ8-vF-1Yh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HPA-Vx-gx5"/>
+                            <constraint firstItem="XZ8-vF-1Yh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WWP-89-gbM"/>
+                            <constraint firstItem="XZ8-vF-1Yh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jNB-Ra-Y8W"/>
+                            <constraint firstItem="XZ8-vF-1Yh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mbD-L4-TD4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="XZ8-vF-1Yh" id="wZo-hS-3NV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+</document>
